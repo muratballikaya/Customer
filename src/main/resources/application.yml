@@ -1,0 +1,27 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /customer-service
+
+keycloak:
+  credentials:
+    secret: newClientSecret
+  resource: newClient
+  auth-server-url: http://localhost:8083/auth/
+  realm: getir
+  scope: profile
+  admin:
+    username: admin
+    password: admin
+
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      database: customer
+      port: 27017
+      host: localhost
+
+logging:
+  level:
+    root: DEBUG
