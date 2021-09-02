@@ -7,9 +7,13 @@ keycloak:
   credentials:
     secret: newClientSecret
   resource: newClient
-  auth-server-url: http://auth-server:8083/auth/
+  auth-server-url: http://localhost:8083/auth/
   realm: getir
   scope: profile
   admin:
     username: admin
     password: admin
+
+logging:
+  level:
+    root: DEBUG
